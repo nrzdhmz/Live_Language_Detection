@@ -1,37 +1,60 @@
 # Live Zoom Subtitles 🎤💬
 
-Generate real-time, on-screen subtitles for your Zoom meetings by capturing both your microphone and the system's audio. The subtitles appear in a transparent floating window that stays on top of other applications.
+Real-time subtitles for Zoom by capturing:
+
+* Your microphone input
+* System audio via BlackHole
+
+Subtitles appear in a floating GUI window, always on top.
 
 ---
 
-## ✨ Features
-- **Dual Audio Capture:** Simultaneously listens to your microphone and other participants' audio via a virtual audio device.
-- **Real-Time Transcription:** Converts speech to text with Google Speech Recognition.
-- **Always-on-Top GUI:** Displays live subtitles in a sleek, non-intrusive floating window.
+## Features
+
+* Captures audio from two sources (you + others)
+* Converts speech to text with Google Speech Recognition
+* Displays live subtitles in a transparent GUI
 
 ---
 
-## 🚀 Getting Started
+## How to Run
 
-### 1. Prerequisites
-Before you begin, ensure you have the following installed:
-- **Python 3.8+**
-- **[BlackHole](https://existential.audio/blackhole/)** (a virtual audio driver for macOS)
-- **Zoom** or any other video conferencing application for testing.
+1. Clone the repo:
 
-### 2. Configuration
+```bash
+git clone https://github.com/nrzdhmz/Live_Zoom_Subtitles.git
+cd Live_Zoom_Subtitles
+```
 
-You must configure the audio device indices in `main.py` to match your setup. The script needs to know which index corresponds to your microphone and which one is the BlackHole audio device.
+2. Install dependencies:
 
-The default values are:
+```bash
+pip install SpeechRecognition pyaudio
+```
+
+(On macOS, you may need `brew install portaudio` for PyAudio.)
+
+3. Run the Application:
+
+```bash
+python main.py
+```
+
+---
+
+## Configuration
+
+In `main.py`:
+
 ```python
 BUILTIN_MIC_INDEX = 1   # Your microphone
 BLACKHOLE_INDEX = 0     # Others / Zoom audio
 ```
 
-### 3. Run the Application
-Once everything is configured, you can start the application:
+---
 
-\`\`\`bash
-python main.py
-\`\`\`
+## Requirements
+
+* Python 3.8+
+* [BlackHole (macOS)](https://existential.audio/blackhole/)
+* Zoom or any other app for testing
