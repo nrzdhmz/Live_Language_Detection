@@ -37,11 +37,8 @@ python main.py
 ---
 
 ## Configuration
-In \`main.py\`:
-\`\`\`python
-BUILTIN_MIC_INDEX = 1   # Your microphone
+In main.py: BUILTIN_MIC_INDEX = 1   # Your microphone
 BLACKHOLE_INDEX = 0     # Others / Zoom audio
-\`\`\`
 
 ---
 
@@ -49,9 +46,3 @@ BLACKHOLE_INDEX = 0     # Others / Zoom audio
 - Python 3.8+  
 - [BlackHole (macOS)](https://existential.audio/blackhole/)  
 - Zoom or any other app for testing  
-
----
-
-## Author
-Developed by [Hamza Nuruzada](https://github.com/nrzdhmz)
-EOL
